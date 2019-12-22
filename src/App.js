@@ -11,7 +11,12 @@ const SIDE = 6
 const SYMBOLS = '😀🎉💖🎩🐶🐱🦄🐬🌍🌛🌞💫🍎🍌🍓🍐🍟🍿'
 
 class App extends Component {
-  cards = this.generateCards()
+  state = {
+    cards: this.generateCards(),
+    currentPair: [],
+    guesses: 0,
+    matchedCardIndices: [],
+  }
 
   generateCards() {
     const result = []
@@ -24,18 +29,32 @@ class App extends Component {
     return shuffle(result)
   }
 
-  handleCardClick(card) {
-    console.log(card, "clicked")
+  getFeedbackForCard(index) {
+    const { currentPair, matchedCardIndices } = this.state
+    const indexMatched = matchedCardIndices.includes(index)
+
+    if (currentPair.length < 2) {
+      return indexMatched || index === currentPair[0] ? 'visible' : 'hidden'
+    }
+    if (currentPair.includes(index)) {
+      
+    }
+  }
+
+  // Arrow function for binding
+  handleCardClick = card => {
+    console.log(card, "clicked", this)
   }
 
   render() {
-    const won = new Date().getSeconds() % 2 === 0
+    const { cards, guesses, matchedCardIndices } = this.state
+    const won = matchedCardIndices.length === cards.length
     return (
       <div className="memory">
-        <GuessCount guesses={0} />
-        {this.cards.map((card, index) => (
+        <GuessCount guesses={guesses} />
+        {cards.map((card, index) => (
           <Card card={card} feedback="visible" key={index} onClick={this.handleCardClick} />
-        ))}
+        ))} 
         { won && <HallOfFame entries={FAKE_HOF}/>}
       </div>
     )
