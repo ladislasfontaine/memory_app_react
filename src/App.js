@@ -6,7 +6,7 @@ import './App.css'
 import GuessCount from './GuessCount'
 import Card from './Card'
 import HallOfFame, { FAKE_HOF } from './HallOfFame'
-import HighScoreInput from "./HighScoreInput";
+import HighScoreInput from './HighScoreInput'
 
 const SIDE = 6
 const SYMBOLS = '😀🎉💖🎩🐶🐱🦄🐬🌍🌛🌞💫🍎🍌🍓🍐🍟🍿'
@@ -95,8 +95,14 @@ class App extends Component {
           />
         ))}
         {won && (
-          hallOfFame ? <HallOfFame entries={hallOfFame} /> : <HighScoreInput guesses={guesses} onStored={this.displayHallOfFame} />
-        )}
+          hallOfFame ? (
+            <HallOfFame entries={hallOfFame} />
+          ) : (
+            <HighScoreInput
+              guesses={guesses}
+              onStored={this.displayHallOfFame}
+            />
+          ))}
       </div>
     )
   }
