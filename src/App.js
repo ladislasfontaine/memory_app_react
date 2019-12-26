@@ -9,7 +9,7 @@ import HallOfFame, { FAKE_HOF } from "./HallOfFame";
 import HighScoreInput from "./HighScoreInput";
 
 const SIDE = 6;
-export const SYMBOLS = "😀🎉💖🎩🐶🐱🦄🐬🌍🌛🌞💫🍎🍌🍓🍐🍟🍿";
+export const SYMBOLS = "😀🎉💖🐶🐱🦄🐬🌍🌛🌞💫🍎🍌🍓🍐🍟🍿🌴";
 const VISUAL_PAUSE_MSECS = 750;
 
 class App extends Component {
@@ -71,7 +71,8 @@ class App extends Component {
 
     const newPair = [currentPair[0], index];
     const newGuesses = guesses + 1;
-    const matched = (cards[newPair[0]] === cards[newPair[1]]) && (newPair[0] !== newPair[1]);
+    const matched =
+      cards[newPair[0]] === cards[newPair[1]] && newPair[0] !== newPair[1];
     this.setState({ currentPair: newPair, guesses: newGuesses });
     if (matched) {
       this.setState({
@@ -87,7 +88,7 @@ class App extends Component {
 
   render() {
     const { cards, guesses, hallOfFame, matchedCardIndices } = this.state;
-    const won = matchedCardIndices.length === 2; // cards.length;
+    const won = matchedCardIndices.length === cards.length;
     return (
       <div className="memory">
         <h1>Memory Game</h1>
