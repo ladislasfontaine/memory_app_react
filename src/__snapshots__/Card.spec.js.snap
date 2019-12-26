@@ -8,7 +8,7 @@ exports[`<Card /> should match its reference snapshot 1`] = `
   <span
     className="symbol"
   >
-    ❓
+    ?
   </span>
 </div>
 `;

@@ -2,6 +2,7 @@
 
 Memory Game est une première application pour apprendre les bases de l'organisation et du fonctionnement de ReactJS.
 
+* `npm install`
 * `npm start` pour lancer l'app en local
 * `npm test` pour lancer les tests
 * [http://localhost:3000](http://localhost:3000)
