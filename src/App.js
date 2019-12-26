@@ -81,25 +81,37 @@ class App extends Component {
     setTimeout(() => this.setState({ currentPair: [] }), VISUAL_PAUSE_MSECS);
   }
 
+  refreshPage() {
+    window.location.reload();
+  }
+
   render() {
     const { cards, guesses, hallOfFame, matchedCardIndices } = this.state;
-    const won = matchedCardIndices.length === cards.length;
+    const won = matchedCardIndices.length === 2; // cards.length;
     return (
       <div className="memory">
+        <h1>Memory Game</h1>
         <GuessCount guesses={guesses} />
-        {cards.map((card, index) => (
-          <Card
-            card={card}
-            feedback={this.getFeedbackForCard(index)}
-            key={index}
-            index={index}
-            onClick={this.handleCardClick}
-          />
-        ))}
+        <div className="cards">
+          {cards.map((card, index) => (
+            <Card
+              card={card}
+              feedback={this.getFeedbackForCard(index)}
+              key={index}
+              index={index}
+              onClick={this.handleCardClick}
+            />
+          ))}
+        </div>
 
         {won &&
           (hallOfFame ? (
-            <HallOfFame entries={hallOfFame} />
+            <div>
+              <HallOfFame entries={hallOfFame} />
+              <button type="button" onClick={this.refreshPage}>
+                Restart
+              </button>
+            </div>
           ) : (
             <HighScoreInput
               guesses={guesses}

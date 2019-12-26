@@ -1,7 +1,39 @@
 .memory {
   display: flex;
-  flex-wrap: wrap;
-  width: 300px;
+  justify-content: flex-start;
+  flex-direction: column;
+  max-width: 300px;
+  height: 100vh;
   margin: auto;
   user-select: none;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h1 {
+  color: #50fa7b;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.memory > div > button {
+  width: 100px;
+  margin: 1em 0;
+  font-size: 1em;
+  color: #50fa7b;
+  border: 1px solid #50fa7b;
+  background-color: transparent;
+  padding: 0.5em;
+}
+
+.memory > div > button:hover {
+  cursor: pointer;
+  background-color: #50fa7a29;
+}
+
+.memory > div > button:focus {
+  outline: none;
 }

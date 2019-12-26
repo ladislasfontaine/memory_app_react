@@ -1,6 +1,8 @@
 .hallOfFame {
   width: 100%;
+  margin: 1em 0;
   border-collapse: collapse;
+  color: #50fa7b;
 }
 
 .hallOfFame .date,
@@ -10,5 +12,5 @@
 }
 
 .hallOfFame tr:nth-child(even) {
-  background: #eee;
+  background: #44475a;
 }

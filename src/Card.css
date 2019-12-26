@@ -1,28 +1,31 @@
-.memory > .card {
+.memory > .cards > .card {
   font-size: 2em;
+  height: 1.2em;
   flex: 1 1 calc(100% / 6 - 0.4em);
-  outline: 0.08em solid silver;
+  outline: 0.08em solid #44475a;
   margin: 0.2em;
   display: flex;
   cursor: default;
 }
 
-.memory > .card.hidden {
-  background: silver;
+.memory > .cards > .card.hidden {
+  background: #44475a;
+  font-weight: 700;
+  color: #282a36;
 }
 
-.memory > .card.justMatched,
-.memory > .card.justMismatched {
+.memory > .cards > .card.justMatched,
+.memory > .cards > .card.justMismatched {
   outline: 0.1em solid rgb(42, 155, 42);
 }
-.memory > .card.justMismatched {
+.memory > .cards > .card.justMismatched {
   outline-color: rgb(228, 102, 102);
 }
 
-.memory > .card.visible {
+.memory > .cards > .card.visible {
   cursor: not-allowed;
 }
 
-.memory > .card > .symbol {
+.memory > .cards > .card > .symbol {
   margin: auto;
 }
