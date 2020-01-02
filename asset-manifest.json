@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/memory_app_react/static/css/main.a2a711b9.chunk.css",
+    "main.js": "/memory_app_react/static/js/main.4e938ef6.chunk.js",
+    "main.js.map": "/memory_app_react/static/js/main.4e938ef6.chunk.js.map",
+    "runtime-main.js": "/memory_app_react/static/js/runtime-main.d3828a57.js",
+    "runtime-main.js.map": "/memory_app_react/static/js/runtime-main.d3828a57.js.map",
+    "static/js/2.b31c60ce.chunk.js": "/memory_app_react/static/js/2.b31c60ce.chunk.js",
+    "static/js/2.b31c60ce.chunk.js.map": "/memory_app_react/static/js/2.b31c60ce.chunk.js.map",
+    "index.html": "/memory_app_react/index.html",
+    "precache-manifest.d244f3921a46b3f0279b1b1266484534.js": "/memory_app_react/precache-manifest.d244f3921a46b3f0279b1b1266484534.js",
+    "service-worker.js": "/memory_app_react/service-worker.js",
+    "static/css/main.a2a711b9.chunk.css.map": "/memory_app_react/static/css/main.a2a711b9.chunk.css.map",
+    "static/js/2.b31c60ce.chunk.js.LICENSE": "/memory_app_react/static/js/2.b31c60ce.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d3828a57.js",
+    "static/js/2.b31c60ce.chunk.js",
+    "static/css/main.a2a711b9.chunk.css",
+    "static/js/main.4e938ef6.chunk.js"
+  ]
+}
