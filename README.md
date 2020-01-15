@@ -1,6 +1,6 @@
 # Memory Game 💻
 
-Memory Game est une première application pour apprendre les bases de l'organisation et du fonctionnement de ReactJS.
+Memory Game est une application pour jouer au jeu du Memory et entrainer sa mémoire. Objectif d'apprendre les bases de l'organisation et du fonctionnement de ReactJS.
 
 * `npm install`
 * `npm start` pour lancer l'app en local
